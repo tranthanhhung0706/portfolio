@@ -250,7 +250,7 @@ export const HeroSection = () => {
             className="relative h-full w-full overflow-hidden rounded-3xl bg-[#0a0e14] shadow-2xl shadow-emerald-500/20"
           >
             <Image
-              src="/home/home-img.png"
+              src="/home/image_avatar.png"
               alt="Portrait"
               fill
               priority
