@@ -17,8 +17,8 @@ import {
 const NAV_ITEMS = [
   { number: "01", label: "about", href: "#about" },
   { number: "02", label: "skills", href: "#skills" },
-  { number: "03", label: "experience", href: "#experience" },
-  { number: "04", label: "testimonials", href: "#testimonials" },
+  { number: "03", label: "projects", href: "#projects" },
+  { number: "04", label: "experience", href: "#experience" },
   { number: "05", label: "contact", href: "#contact" },
 ];
 
