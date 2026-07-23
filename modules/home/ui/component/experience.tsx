@@ -232,16 +232,7 @@ export const Experience = () => {
                </span>
             </motion.div>
 
-            <motion.p
-               variants={fadeUp}
-               initial="hidden"
-               whileInView="show"
-               viewport={{ once: true }}
-               custom={0.2}
-               className="mt-4 text-base font-bold text-white"
-            >
-               Position: {COMPANY.position}
-            </motion.p>
+
 
             <div className="mt-8 divide-y divide-white/10">
                {PROJECTS.map((project, i) => (
