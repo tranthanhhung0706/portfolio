@@ -22,7 +22,7 @@ const STATS = [
 
 export const AboutMe = () => {
    return (
-      <section id="about" className="relative overflow-hidden bg-[#0a0e14] py-24">
+      <section id="about" className="relative overflow-hidden bg-[#0a0e14] py-12 md:py-16">
          <div className="pointer-events-none absolute inset-0">
             <div className="absolute left-0 top-1/2 h-[24rem] w-[24rem] -translate-y-1/2 rounded-full bg-emerald-500/10 blur-[120px]" />
          </div>
@@ -50,7 +50,7 @@ export const AboutMe = () => {
                About me
             </motion.h2>
 
-            <div className="mt-4 grid grid-cols-1 gap-16 lg:grid-cols-2">
+            <div className="mt-4 grid grid-cols-1 gap-8 md:gap-16 lg:grid-cols-2">
                <motion.div
                   variants={fadeUp}
                   initial="hidden"

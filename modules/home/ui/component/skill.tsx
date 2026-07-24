@@ -159,7 +159,7 @@ const SKILLS: SkillGroup[] = [
 
 export const Skill = () => {
    return (
-      <section id="skills" className="relative overflow-hidden bg-[#0a0e14] py-24">
+      <section id="skills" className="relative overflow-hidden bg-[#0a0e14] py-12 md:py-16">
          <div className="pointer-events-none absolute inset-0">
             <div className="absolute left-1/2 top-0 h-[28rem] w-[28rem] -translate-x-1/2 -translate-y-1/3 rounded-full bg-emerald-500/10 blur-[120px]" />
          </div>
@@ -201,7 +201,7 @@ export const Skill = () => {
                </motion.p>
             </div>
 
-            <div className="mt-12 space-y-6">
+            <div className="mt-6 md:mt-12 space-y-4 md:space-y-6">
                {SKILLS.map((group, i) => {
                   const Icon = group.icon;
                   return (

@@ -68,7 +68,7 @@ const COMPANY_PROJECTS = PROJECTS.filter((project) => project.type.includes("com
 
 export const Experience = () => {
    return (
-      <section id="experience" className="relative overflow-hidden bg-[#0a0e14] py-24">
+      <section id="experience" className="relative overflow-hidden bg-[#0a0e14] py-12 md:py-16">
          <div className="pointer-events-none absolute inset-0">
             <div className="absolute right-0 top-1/3 h-[26rem] w-[26rem] translate-x-1/3 rounded-full bg-emerald-500/10 blur-[120px]" />
          </div>
@@ -102,7 +102,7 @@ export const Experience = () => {
                whileInView="show"
                viewport={{ once: true }}
                custom={0.15}
-               className="mt-10 flex flex-col gap-2 border-b border-white/10 pb-6 sm:flex-row sm:items-center sm:justify-between"
+               className="mt-4 md:mt-10 flex flex-col gap-2 border-b border-white/10 pb-6 sm:flex-row sm:items-center sm:justify-between"
             >
                <h3 className="text-lg font-bold uppercase tracking-wide text-white sm:text-xl">
                   {COMPANY.company}
@@ -111,8 +111,6 @@ export const Experience = () => {
                   {COMPANY.duration}
                </span>
             </motion.div>
-
-
 
             <div className="mt-8 divide-y divide-white/10">
                {COMPANY_PROJECTS.map((project, i) => (

@@ -96,7 +96,7 @@ export const Header = () => {
                 <span className="text-emerald-400">$</span> Alex Rivera
               </SheetTitle>
             </SheetHeader>
-            <nav className="flex flex-col gap-6 px-4">
+            <nav className="flex flex-1 flex-col gap-6 px-4">
               {NAV_ITEMS.map((item) => (
                 <NavLink
                   key={item.href}
@@ -108,7 +108,7 @@ export const Header = () => {
               <Button
                 nativeButton={false}
                 variant="outline"
-                className="mt-2 w-full rounded-md border-emerald-400/40 bg-transparent font-mono text-sm text-emerald-400 hover:bg-emerald-400/10 hover:text-emerald-400"
+                className="mt-auto w-full rounded-md border-emerald-400/40 bg-transparent font-mono text-sm text-emerald-400 hover:bg-emerald-400/10 hover:text-emerald-400"
                 render={<a href="#contact" onClick={() => setOpen(false)} />}
               >
                 get in touch
