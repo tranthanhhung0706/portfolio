@@ -35,7 +35,7 @@ export const ProjectView = () => {
    );
 
    return (
-      <section className="relative overflow-hidden bg-[#0a0e14] py-24">
+      <section className="relative overflow-hidden bg-[#0a0e14] py-8 md:py-16">
          <div className="pointer-events-none absolute inset-0">
             <div className="absolute left-1/2 top-0 h-[28rem] w-[28rem] -translate-x-1/2 -translate-y-1/3 rounded-full bg-emerald-500/10 blur-[120px]" />
          </div>
@@ -81,7 +81,7 @@ export const ProjectView = () => {
                whileInView="show"
                viewport={{ once: true }}
                custom={0.25}
-               className="mt-10 flex flex-wrap gap-2"
+               className="mt-8 flex flex-wrap gap-2"
             >
                {FILTERS.map((item) => (
                   <button

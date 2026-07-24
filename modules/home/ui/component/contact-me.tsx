@@ -55,7 +55,7 @@ export const ContactMe = () => {
    };
 
    return (
-      <section id="contact" className="relative overflow-hidden bg-[#0a0e14] py-24">
+      <section id="contact" className="relative overflow-hidden bg-[#0a0e14] pt-4 md:pt-16 pb-12 md:pb-16">
          <div className="pointer-events-none absolute inset-0">
             <div className="absolute left-1/2 bottom-0 h-[26rem] w-[26rem] -translate-x-1/2 translate-y-1/3 rounded-full bg-emerald-500/10 blur-[120px]" />
          </div>
@@ -83,7 +83,7 @@ export const ContactMe = () => {
                Let&apos;s build something
             </motion.h2>
 
-            <div className="mt-10 grid grid-cols-1 gap-16 lg:grid-cols-2">
+            <div className="mt-4 md:mt-10 grid grid-cols-1 gap-8 md:gap-16 lg:grid-cols-2">
                <div>
                   <motion.p
                      variants={fadeUp}
@@ -103,7 +103,7 @@ export const ContactMe = () => {
                      whileInView="show"
                      viewport={{ once: true }}
                      custom={0.3}
-                     className="mt-8 space-y-4"
+                     className="mt-4 md:mt-8 space-y-4"
                   >
                      {CONTACT_LINKS.map((link) => (
                         <a

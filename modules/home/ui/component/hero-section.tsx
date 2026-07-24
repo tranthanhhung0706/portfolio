@@ -140,7 +140,7 @@ export const HeroSection = () => {
         <div className="absolute bottom-0 right-0 h-[24rem] w-[24rem] translate-x-1/4 translate-y-1/4 rounded-full bg-emerald-400/10 blur-[100px]" />
       </div>
 
-      <div className="relative mx-auto grid min-h-[calc(100vh-4rem)] max-w-6xl grid-cols-1 items-center gap-16 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:px-8">
+      <div className="relative mx-auto grid min-h-[calc(100vh-4rem)] max-w-6xl grid-cols-1 items-center gap-16 px-4 py-10 md:py-8 sm:px-6 lg:grid-cols-2 lg:px-8">
         {/* text column */}
         <TypewriterSequence>
           <div>
@@ -224,40 +224,42 @@ export const HeroSection = () => {
         </TypewriterSequence>
 
         {/* portrait column */}
-        <div className="relative mx-auto flex aspect-[3/4] w-full max-w-sm items-center justify-center lg:mx-0 lg:ml-auto">
-          {DECK_CARDS.map((card, i) => (
+        <div className="px-4">
+          <div className="relative mx-auto flex aspect-[3/4] w-full max-w-sm items-center justify-center lg:mx-0 lg:ml-auto">
+            {DECK_CARDS.map((card, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.7, rotate: card.rotate * 2.2 }}
+                animate={{ opacity: 1, scale: 1, rotate: card.rotate }}
+                transition={{
+                  duration: 0.55,
+                  delay: i * DECK_STAGGER,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className={`absolute inset-0 rounded-3xl ${card.className}`}
+              />
+            ))}
+
             <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.7, rotate: card.rotate * 2.2 }}
-              animate={{ opacity: 1, scale: 1, rotate: card.rotate }}
+              initial={{ opacity: 0, scale: 0.75, rotate: -14 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{
-                duration: 0.55,
-                delay: i * DECK_STAGGER,
+                duration: 0.6,
+                delay: IMAGE_DELAY,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className={`absolute inset-0 rounded-3xl ${card.className}`}
-            />
-          ))}
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.75, rotate: -14 }}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
-            transition={{
-              duration: 0.6,
-              delay: IMAGE_DELAY,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="relative h-full w-full overflow-hidden rounded-3xl bg-[#0a0e14] shadow-2xl shadow-emerald-500/20"
-          >
-            <Image
-              src="/home/image_avatar.png"
-              alt="Portrait"
-              fill
-              priority
-              sizes="(min-width: 1024px) 24rem, 80vw"
-              className="object-cover object-top"
-            />
-          </motion.div>
+              className="relative h-full w-full overflow-hidden rounded-3xl bg-[#0a0e14] shadow-2xl shadow-emerald-500/20"
+            >
+              <Image
+                src="/home/image_avatar.png"
+                alt="Portrait"
+                fill
+                priority
+                sizes="(min-width: 1024px) 24rem, 80vw"
+                className="object-cover object-top"
+              />
+            </motion.div>
+          </div>
         </div>
       </div>
 

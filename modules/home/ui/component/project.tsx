@@ -20,7 +20,7 @@ const FEATURED_PROJECTS = PROJECTS.slice(0, 6);
 
 export const Project = () => {
    return (
-      <section id="projects" className="relative overflow-hidden bg-[#0a0e14] py-24">
+      <section id="projects" className="relative overflow-hidden bg-[#0a0e14] py-12 md:py-16">
          <div className="pointer-events-none absolute inset-0">
             <div className="absolute right-0 top-0 h-[26rem] w-[26rem] translate-x-1/3 -translate-y-1/3 rounded-full bg-emerald-500/10 blur-[120px]" />
          </div>
@@ -48,7 +48,7 @@ export const Project = () => {
                Selected work & demos
             </motion.h2>
 
-            <div className="mt-12 grid grid-cols-1 items-start gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-6 md:mt-12 grid grid-cols-1 items-start gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3">
                {FEATURED_PROJECTS.map((project, i) => (
                   <ProjectCard key={project.slug} project={project} delay={0.1 + i * 0.1} />
                ))}
