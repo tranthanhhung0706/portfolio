@@ -141,6 +141,24 @@ export const PROJECTS: ProjectItem[] = [
       githubUrl: "https://github.com/TogetherWeBuildWebsite/website_e_commerce",
    },
    {
+      slug: "restaurant-online-ordering-website",
+      title: "Restaurant Online Ordering Website",
+      type: ["freelancer", "shopify"],
+      duration: "2025",
+      description:
+         "Developed a restaurant ordering website built on Next.js integrated with Shopify via GraphQL API, allowing customers to order food by selecting location, delivery time, and product add-ons, with member login, order history, and discount code registration for new members.",
+      stack: ["Next.js", "Tailwind CSS", "shadcn/ui", "Shopify GraphQL API"],
+      highlights: [
+         "Built a headless ordering website using Next.js integrated with Shopify backend via GraphQL API.",
+         "Implemented location-based and delivery time selection at checkout, along with customizable product add-ons.",
+         "Implemented customer login/authentication with order history and real-time order tracking.",
+         "Built new member registration flow with automated discount code generation for first-time customers.",
+         "Customized responsive UI/UX using Tailwind CSS and shadcn/ui to match client branding.",
+         "Optimized image handling with Next.js Image, WebP conversion, lazy loading, and responsive sizing.",
+         "Integrated Google Analytics, robots.txt, and XML sitemaps to track traffic and manage crawler access.",
+      ],
+   },
+   {
       slug: "visa-document-management-system",
       title: "Visa Document Management System",
       type: ["company"],
