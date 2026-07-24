@@ -259,6 +259,22 @@ export const PROJECTS: ProjectItem[] = [
       ],
       demoUrl: "https://www.mualobster.com/",
    },
+   {
+      slug: "shopify-custom-shipping-tracking-app",
+      title: "Custom App in Shopify",
+      type: ["freelancer", "shopify"],
+      duration: "2025",
+      description:
+         "Built a custom Shopify app that adds a Saturday delivery surcharge at checkout, tracks order numbers, and automates checking shipment delivery status.",
+      stack: ["Shopify Admin API", "Shopify apps", "Remix", "React", "Webhooks"],
+      highlights: [
+         "Built a custom Shopify app integrated into the Shopify Admin dashboard for centralized shipping management.",
+         "Implemented automatic Saturday delivery surcharge rules applied at checkout based on selected delivery date.",
+         "Added order tracking number management, letting merchants view and update tracking info per order.",
+         "Automated shipment status checks, syncing delivery progress and updating order status accordingly.",
+         "Designed a dashboard view within Shopify Admin to monitor shipment status and manage delivery fees at a glance.",
+      ],
+   },
 ];
 
 export const getProjectBySlug = (slug: string) =>
