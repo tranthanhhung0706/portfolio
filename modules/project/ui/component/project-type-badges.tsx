@@ -1,4 +1,4 @@
-import { Briefcase, PlayCircle, ShoppingBag, Sparkles } from "lucide-react";
+import { Briefcase, PlayCircle, ShoppingBag, Sparkles, UserRound } from "lucide-react";
 
 import { PROJECT_TYPE_LABELS, type ProjectType } from "@/modules/project/constants/data";
 
@@ -7,6 +7,7 @@ const TAG_STYLES: Record<ProjectType, string> = {
    personal: "border-purple-400/30 bg-purple-400/10 text-purple-300",
    demo: "border-amber-400/30 bg-amber-400/10 text-amber-300",
    shopify: "border-sky-400/30 bg-sky-400/10 text-sky-300",
+   freelancer: "border-rose-400/30 bg-rose-400/10 text-rose-300",
 };
 
 const TAG_ICONS: Record<ProjectType, typeof Briefcase> = {
@@ -14,6 +15,7 @@ const TAG_ICONS: Record<ProjectType, typeof Briefcase> = {
    personal: Sparkles,
    demo: PlayCircle,
    shopify: ShoppingBag,
+   freelancer: UserRound,
 };
 
 type Props = {

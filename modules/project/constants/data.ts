@@ -1,4 +1,4 @@
-export type ProjectType = "company" | "personal" | "demo" | "shopify";
+export type ProjectType = "company" | "personal" | "demo" | "shopify" | "freelancer";
 
 export type ProjectItem = {
    slug: string;
@@ -18,8 +18,41 @@ export const PROJECT_TYPE_LABELS: Record<ProjectType, string> = {
    personal: "Personal",
    demo: "Demo",
    shopify: "Shopify",
+   freelancer: "Freelancer",
 };
-
+export const HIGHLIGHT_TERMS = [
+   "Shopify Admin API",
+   "Google Sheets API",
+   "Firebase Cloud Messaging",
+   "Notification API",
+   "TanStack Query",
+   "Next.js Image",
+   "Google Analytics",
+   "Shopify apps",
+   "XML sitemaps",
+   "Service Workers",
+   "Context API",
+   "GraphQL API",
+   "Shopify CMS",
+   "robots.txt",
+   "OpenAI API",
+   "SignalR",
+   "WooCommerce",
+   "Zustand",
+   "Swagger",
+   "SSR/SSG",
+   "dnd-kit",
+   "Tiptap",
+   "Excel",
+   "WebP",
+   "SEO",
+   "Shopify",
+   "Tailwind CSS",
+   "shadcn/ui",
+   "Liquid",
+   "Motion",
+   "Swiper",
+].sort((a, b) => b.length - a.length);
 export const PROJECTS: ProjectItem[] = [
    {
       slug: "headless-ecommerce-platform",
@@ -37,14 +70,19 @@ export const PROJECTS: ProjectItem[] = [
          "shadcn/ui",
          "TanStack Query",
          "Axios",
+         "Motion",
+         "Swiper",
          "SEO",
       ],
       highlights: [
          "Built headless storefronts using Next.js integrated with Shopify backend via GraphQL API for real-time inventory sync.",
          "Implemented Shopify Admin API integration for automated product imports and multi-channel updates.",
          "Customized responsive UI/UX using Tailwind CSS and shadcn/ui to match client branding.",
+         "Developed and customized Shopify themes (Liquid, HTML, CSS, JS) to match client branding and requirements.",
+         "Used Motion for smooth page/section transitions and Swiper for product image and testimonial carousels.",
          "Optimized image handling with Next.js Image, WebP conversion, lazy loading, and responsive sizing.",
          "Integrated Google Analytics, robots.txt, and XML sitemaps to track traffic and manage crawler access.",
+         "Created custom Shopify apps to extend storefront functionality beyond standard theme capabilities.",
       ],
    },
    {
@@ -60,6 +98,8 @@ export const PROJECTS: ProjectItem[] = [
          "Tailwind CSS",
          "shadcn/ui",
          "SEO",
+         "Motion",
+         "Swiper",
       ],
       highlights: [
          "Built a headless landing page using Next.js integrated with Shopify backend via GraphQL API for real-time inventory sync.",
@@ -70,6 +110,53 @@ export const PROJECTS: ProjectItem[] = [
          "Combined Shopify CMS to manage blog posts, product information, and brochure downloads, along with automated email delivery for contact form submissions.",
       ],
       demoUrl: "https://modular-teamplate-beetech.vercel.app",
+      githubUrl: "https://github.com/tranthanhhung0706/modular_house",
+   },
+   {
+      slug: "website-e-commerce-shopify",
+      title: "Website E-commerce Shopify",
+      type: ["demo", "shopify"],
+      duration: "2025",
+      description:
+         "Developed a full-featured Shopify e-commerce storefront integrated via GraphQL API, enabling customer authentication, order tracking, and secure online checkout and payment.",
+      stack: [
+         "Next.js",
+         "Shopify GraphQL API",
+         "Tailwind CSS",
+         "shadcn/ui",
+         "SEO",
+         "Motion",
+         "Swiper",
+      ],
+      highlights: [
+         "Built a headless storefront using Next.js integrated with Shopify backend via GraphQL API for real-time product and inventory sync.",
+         "Implemented Shopify Admin API integration for automated product imports and multi-channel updates.",
+         "Integrated secure online payment and checkout flow, allowing customers to complete purchases directly on the storefront.",
+         "Implemented customer login/authentication with order history and real-time order tracking.",
+         "Customized responsive UI/UX using Tailwind CSS and shadcn/ui to match client branding.",
+         "Optimized image handling with Next.js Image, WebP conversion, lazy loading, and responsive sizing.",
+         "Integrated Google Analytics, robots.txt, and XML sitemaps to track traffic and manage crawler access.",
+      ],
+      demoUrl: "https://clientecommerce-pied.vercel.app/",
+      githubUrl: "https://github.com/TogetherWeBuildWebsite/website_e_commerce",
+   },
+   {
+      slug: "restaurant-online-ordering-website",
+      title: "Restaurant Online Ordering Website",
+      type: ["freelancer", "shopify"],
+      duration: "2025",
+      description:
+         "Developed a restaurant ordering website built on Next.js integrated with Shopify via GraphQL API, allowing customers to order food by selecting location, delivery time, and product add-ons, with member login, order history, and discount code registration for new members.",
+      stack: ["Next.js", "Tailwind CSS", "shadcn/ui", "Shopify GraphQL API"],
+      highlights: [
+         "Built a headless ordering website using Next.js integrated with Shopify backend via GraphQL API.",
+         "Implemented location-based and delivery time selection at checkout, along with customizable product add-ons.",
+         "Implemented customer login/authentication with order history and real-time order tracking.",
+         "Built new member registration flow with automated discount code generation for first-time customers.",
+         "Customized responsive UI/UX using Tailwind CSS and shadcn/ui to match client branding.",
+         "Optimized image handling with Next.js Image, WebP conversion, lazy loading, and responsive sizing.",
+         "Integrated Google Analytics, robots.txt, and XML sitemaps to track traffic and manage crawler access.",
+      ],
    },
    {
       slug: "visa-document-management-system",
@@ -155,15 +242,22 @@ export const PROJECTS: ProjectItem[] = [
       ],
    },
    {
-      slug: "personal-project-placeholder",
-      title: "TODO: Personal Project Name",
-      type: ["personal"],
-      duration: "MM/YYYY - MM/YYYY",
-      description: "TODO: short description of what this personal project does and why you built it.",
-      stack: ["TODO"],
-      highlights: ["TODO: key thing you built or learned"],
-      // demoUrl: "https://...",
-      // githubUrl: "https://github.com/...",
+      slug: "mualobster-seafood-store",
+      title: "MuaLobster Seafood Store",
+      type: ["freelancer", "shopify"],
+      duration: "2025",
+      description:
+         "Customized and operated a live Shopify seafood e-commerce store, combining theme development with custom and third-party apps to manage promotions, shipping, and order fulfillment.",
+      stack: ["Shopify", "Liquid", "HTML", "CSS", "JavaScript", "Shopify apps"],
+      highlights: [
+         "Customized the Shopify theme (Liquid, HTML, CSS, JS) to match branding and business requirements.",
+         "Built a custom Shopify app to extend storefront functionality beyond standard theme capabilities.",
+         "Integrated third-party Shopify apps to manage store operations and streamline day-to-day workflows.",
+         "Implemented promotional popups to boost conversions and highlight offers.",
+         "Configured dynamic shipping fee rules based on delivery location and order conditions.",
+         "Added order tracking with tracking numbers and delivery scheduling for customers.",
+      ],
+      demoUrl: "https://www.mualobster.com/",
    },
 ];
 
